@@ -10,6 +10,12 @@ describe('Hide and Show Component', () => {
     beforeEach(() => {
         render(<HideAndShow title='Hide and Show Testing'><h4>Content</h4></HideAndShow>)
     })
+    
+    test('Hide and show component snapshot test', () => {
+        const component = render(<HideAndShow title='Hide and Show Testing'><h4>Content</h4></HideAndShow>);
+      
+        expect(component).toMatchSnapshot()
+    })
 
     it('should show title', () => {
         expect(screen.getByText(/Hide and Show Testing/i)).toBeInTheDocument();
