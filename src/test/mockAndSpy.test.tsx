@@ -29,8 +29,9 @@ describe('Player Movement with mocking', () => {
            return { x, y };
        })
 
+       player.move = mock;
        
-       expect(mock(8,6)).toEqual({x: 8, y: 6});
+       expect(player.move(8,6)).toEqual({x: 8, y: 6});
        expect(mock).toHaveBeenCalledTimes(1);
     });
 });
