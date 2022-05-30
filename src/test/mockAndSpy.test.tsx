@@ -10,6 +10,15 @@ const player = {
         this.posY = y;
     }
 };
+/* note :
+spies (vi.spyOn()) can only help you spy on functions, 
+they are not able to alter the implementation of those functions. 
+In the case where we do need to create a fake (or mocked) version of a function 
+we can use vi.fn().
+
+Both vi.fn() and vi.spyOn() share the same methods, 
+however only the return result of vi.fn() is callable.
+*/
 
 //spy
 describe('Player Movement with spy', () => {
