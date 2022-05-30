@@ -1,8 +1,8 @@
 # vitest
 sample unit testing using vitest
 
-# to run the test:
+# run the test:
 yarn run test
 
-# to run the test in browser:
+# run the test in browser:
 yarn run test:ui
